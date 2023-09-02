@@ -1,23 +1,31 @@
 
+<div class="row"> 
+  <input type="text"  class="form-control" [(ngModel)]="searchValue">
+</div>
+
+
 <div class="container">
 <div class="row">
-    <div class="card mx-2" style="width: 18rem;">
-        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-m136blgdins/gallery/in-galaxy-m13-5g-4gb-sm-m136blgdins-thumb-533154528?$344_344_PNG$" class="card-img-top" alt="...">
+
+    <div class="card mx-2"
+     *ngFor="let product of allproducts" 
+     style="width: 18rem;"
+     >
+     <a [routerLink]="'/productdetails/' + product.id">
+
+  <img 
+  src={{imagepath+product.image}}
+  class="card-img-top" 
+  alt="...">
+      </a>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Samsung Galaxy M Series - Widescreen Mobiles | Samsung India</p>
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-text">{{product.description}}</p>
           <a href="#" class="btn btn-primary">view</a>
         </div>
       </div>
-    
-      <div class="card mx-2" style="width: 18rem;">
-        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/catalog/product/cache/8e279240a6612e9579d3be696bac1c07/a/p/apple-iphone-13-pro-128gb-5g-graphite.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Apple iPhone 13 Pro, 128GB, 5G- Graphite price in Egypt | B.TECH</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+     
+      
 
 </div>
 </div>

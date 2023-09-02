@@ -1,27 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
+import { FormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
+  
   declarations: [
+   
     AppComponent,
     NavbarComponent,
     HeaderComponent,
     ProductsComponent,
     FooterComponent,
-    SideMenuComponent,
+    ProductDetailsComponent,
+    
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    RouterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

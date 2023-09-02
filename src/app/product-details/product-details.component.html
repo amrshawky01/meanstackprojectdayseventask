@@ -1,0 +1,11 @@
+<div *ngIf="selectedproduct">
+  <h2>{{ selectedproduct.title }}</h2>
+  <img [src]="selectedproduct.image" alt="{{ selectedproduct.title }}" width="200">
+  <p>Rating: {{ selectedproduct.rating.rate }} ({{ selectedproduct.rating.count }} ratings)</p>
+  <p>Category: {{ selectedproduct.category }}</p>
+  <p>Description: {{ selectedproduct.description }}</p>
+  <p>Price: ${{ selectedproduct.price }}</p>
+</div>
+<div *ngIf="!selectedproduct">
+  <p>Product not found</p>
+</div>
